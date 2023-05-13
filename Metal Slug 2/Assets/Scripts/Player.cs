@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using static Unity.Burst.Intrinsics.Arm;
 
 public class Player : MonoBehaviour
@@ -9,10 +10,15 @@ public class Player : MonoBehaviour
     private Animator ani;
     public bool isRight = true;
     public bool nen_dat;
+
     // public Animator animator;
     public float Run;
     public bool isJump;
     private Rigidbody2D rigidbody2d;
+
+    // tăng boom
+    private int boom = 10;
+    public Text textBoom;
     // Start is called before the first frame update
     void Start()
     {
@@ -106,6 +112,34 @@ public class Player : MonoBehaviour
             }
         }
 
+        if(Input.GetKeyDown(KeyCode.LeftShift) && boom > 0)
+        {
+            if (count == 0)
+            {
+                boom--;
+                textBoom.text = boom + "";
+                var x = transform.position.x + (isRight ? 1.5f : -1.5f);
+                var y = transform.position.y + (isRight ? 1f : 1f);
+                var z = transform.position.z;
+
+                // chuyển isright ben bullet qua bên đây
+                GameObject gameObject = (GameObject)Instantiate(Resources.Load("Prefabs/Boom"),
+                new Vector3(x, y, z),
+                Quaternion.identity);
+                gameObject.GetComponent<Boom>().setIsRight(isRight);
+
+                ani.SetBool("IsThrowBoom", true);
+                ani.Play("throwBoom");
+                count = 1; 
+            }
+            if(count == 1)
+            {
+                ani.SetBool("IsThrowBoom", false);
+                ani.Play("throwBoom");
+                count = 0;
+            }
+        }
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -121,5 +155,13 @@ public class Player : MonoBehaviour
             ani.Play("DeadByDao");
         }
 
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("boom"))
+        {
+            boom++;
+            textBoom.text = boom + "";
+        }
     }
 }
