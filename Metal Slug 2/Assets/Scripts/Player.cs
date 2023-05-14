@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using static Unity.Burst.Intrinsics.Arm;
 
@@ -19,6 +20,17 @@ public class Player : MonoBehaviour
     // tăng boom
     private int boom = 10;
     public Text textBoom;
+
+    // mạng
+    private int life;
+    public bool isAlive;
+    public GameObject Alive1;
+    public GameObject Alive4;
+    public GameObject Alive3;
+    public GameObject Alive5;
+    public GameObject Alive2;
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +39,9 @@ public class Player : MonoBehaviour
         rigidbody2d = GetComponent<Rigidbody2D>();
         Run = 0;
         nen_dat = true;
+
+        isAlive = false;
+        life = 5;
 
 
     }
@@ -153,6 +168,7 @@ public class Player : MonoBehaviour
         {
             ani.SetBool("IsDeadByDao", true);
             ani.Play("DeadByDao");
+            lifeCheck();
         }
 
     }
@@ -162,6 +178,54 @@ public class Player : MonoBehaviour
         {
             boom++;
             textBoom.text = boom + "";
+        }
+    }
+
+    private void lifeCheck()
+    {
+        if(life == 5)
+        {
+            life--;
+            var x = transform.position.x;
+            var y = transform.position.y + 5f;
+            transform.localPosition = new Vector2(x, y);
+            Alive5.SetActive(false);
+        }
+        else if (life == 4)
+        {
+            life--;
+            var x = transform.position.x;
+            var y = transform.position.y + 5f;
+            transform.localPosition = new Vector2(x, y);
+            Alive4.SetActive(false);
+        }
+        else if (life == 3)
+        {
+            life--;
+            var x = transform.position.x;
+            var y = transform.position.y + 5f;
+            transform.localPosition = new Vector2(x, y);
+            Alive3.SetActive(false);
+        }
+        else if (life == 2)
+        {
+            life--;
+            var x = transform.position.x;
+            var y = transform.position.y + 5f;
+            transform.localPosition = new Vector2(x, y);
+            Alive2.SetActive(false);
+        }
+        else if (life == 1)
+        {
+            life--;
+            var x = transform.position.x;
+            var y = transform.position.y + 5f;
+            transform.localPosition = new Vector2(x, y);
+            Alive1.SetActive(false);
+        }
+        else
+        {
+            SceneManager.LoadScene("Man_1");
         }
     }
 }
