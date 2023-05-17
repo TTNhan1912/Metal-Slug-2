@@ -115,16 +115,15 @@ public class Player : MonoBehaviour
                 Quaternion.identity);
                 gameObject.GetComponent<BulletPisTol>().setIsRight(isRight);
 
-                ani.SetBool("IsShoot", true);
-                ani.Play("shoot");
+                ani.SetTrigger("nutban");
+                
                 count = 1; 
             }
-            if(count == 1)
-            {
-                ani.SetBool("IsShoot", false);
-                ani.Play("shoot");
-                count = 0;
-            }
+                if(count == 1)
+                {
+                    
+                    count = 0;
+                }
         }
 
         if(Input.GetKeyDown(KeyCode.LeftShift) && boom > 0)
