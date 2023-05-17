@@ -100,6 +100,12 @@ public class Player : MonoBehaviour
                 ani.Play("jump");
             }
         }
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            ani.SetBool("IsCanChien", true);
+            ani.Play("canchien");
+            
+        }
 
         if(Input.GetKeyDown(KeyCode.Space))
         {
