@@ -101,6 +101,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -407,7 +419,7 @@ TextureImporter:
         width: 30
         height: 38
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -415,6 +427,132 @@ TextureImporter:
       bones: []
       spriteID: 9b263290efbdc5b4aa3d96ab7c9c5dc4
       internalID: -1588963914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: play_15
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 968
+        width: 30
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22e86ce111a18c245b47de086d113a42
+      internalID: 400344580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: play_16
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 968
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3699f5456f76ea548b1b419a4252babe
+      internalID: 1724648037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: play_17
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 968
+        width: 26
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb7c0770baf4b5a40b899579f7714480
+      internalID: -1766477648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: play_18
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 968
+        width: 41
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb534eedca1b31c44af02cf990a53ef7
+      internalID: -131364798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: play_19
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 968
+        width: 49
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d131413a77697b409c9de5fc28cac8a
+      internalID: 2146145579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: play_20
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 968
+        width: 49
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 670e1de5e6cc6ab4084c792862a0ed17
+      internalID: -1467778634
       vertices: []
       indices: 
       edges: []
@@ -431,20 +569,26 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       play_3: -971780472
+      play_15: 400344580
+      play_18: -131364798
       play_14: -1588963914
       play_4: 44823157
       play_0: -380001058
+      play_19: 2146145579
       play_9: -406974239
+      play_16: 1724648037
       play_5: 1367072084
       play_6: 750063115
       play_7: 1144552049
       play_1: 1894157104
       play_8: -874392800
       play_13: 420586474
+      play_20: -1467778634
       play_11: 264239957
       play_2: 1430302477
       play_12: -593782752
       play_10: -1399037172
+      play_17: -1766477648
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
