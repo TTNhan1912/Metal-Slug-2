@@ -3,7 +3,18 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Arabian
+  - nen_dat
+  - H
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - Prisoner
+  - linhbo
+  - BulletPistol
   layers:
   - Default
   - TransparentFX
