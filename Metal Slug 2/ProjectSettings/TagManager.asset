@@ -13,6 +13,8 @@ TagManager:
   - 4
   - 5
   - Prisoner
+  - linhbo
+  - BulletPistol
   layers:
   - Default
   - TransparentFX
