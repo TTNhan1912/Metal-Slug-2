@@ -189,6 +189,11 @@ public class Player : MonoBehaviour
             boom++;
             textBoom.text = boom + "";
         }
+
+        if (collision.gameObject.CompareTag("Ammo"))
+        {
+            Destroy(collision.gameObject);
+        }
     }
 
     private void lifeCheck()
