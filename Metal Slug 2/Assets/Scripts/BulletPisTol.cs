@@ -1,5 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BulletPisTol : MonoBehaviour
@@ -21,5 +23,15 @@ public class BulletPisTol : MonoBehaviour
     public void setIsRight(bool isRight)
     {
         this.isRight = isRight;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        // bắn trúng enemis
+        if (collision.gameObject.CompareTag("linhbo"))
+        {
+            Destroy(gameObject);
+
+        }
     }
 }

@@ -3,17 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Arabian
-  - nen_dat
-  - H
-  - 1
-  - 2
-  - 3
-  - 4
-  - 5
-  - Prisoner
-  - Ammo
+  tags: []
   layers:
   - Default
   - TransparentFX
