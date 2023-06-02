@@ -10,7 +10,7 @@ public class PrisonerScript : MonoBehaviour
     private bool isCollideNPC/*, isRescued*/;
     private Vector2 originalPosition;
     public GameObject ammo, item, item1;
-    private bool reward = false;
+    //private bool reward = false;
 
     public bool isRight;
 
