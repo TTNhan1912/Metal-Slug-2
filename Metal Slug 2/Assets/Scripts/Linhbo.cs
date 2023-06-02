@@ -106,13 +106,13 @@ public class Linhbo : MonoBehaviour
     {
         // Đảo ngược hướng scale.x của nhân vật
         Vector3 scale = transform.localScale;
-        if (isRight)
+        if (!isRight)
         {
-            scale.x *= 5f;
+            scale.x *= -5f;
         }
         else
         {
-            scale.x *= -5f;
+            scale.x *= 5f;
         }
         transform.localScale = scale;
 

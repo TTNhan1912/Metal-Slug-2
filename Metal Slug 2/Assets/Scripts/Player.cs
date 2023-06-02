@@ -49,7 +49,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.D))
         {
             isRight = true;
             if(nen_dat == true)
@@ -70,7 +70,7 @@ public class Player : MonoBehaviour
         {
             ani.SetBool("IsRunning", false);
         }
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.A))
         {
             isRight = false;
 
@@ -90,14 +90,14 @@ public class Player : MonoBehaviour
             transform.localScale = new Vector3(-0.8F, 0.8F, 0.8F);
         }
 
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             if (nen_dat)
             {
                 rigidbody2d.AddForce(new Vector2(0, 420));
                 nen_dat = false;
-                ani.SetBool("IsJump", true);
                 ani.Play("jump");
+                ani.SetBool("IsJump", false);
             }
         }
         if (Input.GetKeyDown(KeyCode.C))
@@ -107,7 +107,7 @@ public class Player : MonoBehaviour
             
         }
 
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.Mouse0))
         {
             if (count == 0)
             {
@@ -115,6 +115,7 @@ public class Player : MonoBehaviour
                 var y = transform.position.y + (isRight ? 0.5f : 0.5f);
                 var z = transform.position.z;
 
+                ani.Play("shoot");
                 // chuyển isright ben bullet qua bên đây
                 GameObject gameObject = (GameObject)Instantiate(Resources.Load("Prefabs/BulletPistol"),
                 new Vector3(x, y, z),
@@ -147,6 +148,8 @@ public class Player : MonoBehaviour
                 new Vector3(x, y, z),
                 Quaternion.identity);
                 gameObject.GetComponent<Boom>().setIsRight(isRight);
+
+                
 
                 ani.SetBool("IsThrowBoom", true);
                 ani.Play("throwBoom");
