@@ -29,7 +29,7 @@ public class Player : MonoBehaviour
     public GameObject Alive3;
     public GameObject Alive5;
     public GameObject Alive2;
-    
+
 
     // Start is called before the first frame update
     void Start()
@@ -42,6 +42,8 @@ public class Player : MonoBehaviour
 
         isAlive = false;
         life = 5;
+
+
 
 
     }
@@ -183,6 +185,10 @@ public class Player : MonoBehaviour
         {
             boom++;
             textBoom.text = boom + "";
+        }
+        if (collision.gameObject.CompareTag("Ammo"))
+        {
+            Destroy(collision.gameObject);
         }
     }
 

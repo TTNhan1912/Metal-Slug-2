@@ -13,6 +13,7 @@ TagManager:
   - 4
   - 5
   - Prisoner
+  - Ammo
   layers:
   - Default
   - TransparentFX
