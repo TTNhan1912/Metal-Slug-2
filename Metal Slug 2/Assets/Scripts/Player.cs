@@ -184,15 +184,20 @@ public class Player : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("boom"))
-        {
-            boom++;
-            textBoom.text = boom + "";
-        }
+        //if (collision.gameObject.CompareTag("boom"))
+        //{
+        //    boom++;
+        //    textBoom.text = boom + "";
+        //}
 
         if (collision.gameObject.CompareTag("Ammo"))
         {
             Destroy(collision.gameObject);
+        }
+
+        if (collision.gameObject.CompareTag("danBoss"))
+        {
+            lifeCheck();
         }
     }
 

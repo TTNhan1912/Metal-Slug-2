@@ -25,9 +25,10 @@ public class OpenTower : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Tower.isPlay == true)
+        if (Tower.isPlaying == true)
         {
-            animator.SetTrigger("open");
+            //animator.SetTrigger("open");
+            animator.SetBool("opening", true);
 
             time -= Time.deltaTime;
             if(time < 0)
@@ -42,12 +43,18 @@ public class OpenTower : MonoBehaviour
                     Vector3 direction = playerPos - viTriBan;
                     Debug.Log(">>>>>>"+ playerPos);
                     rb.AddForce(direction.normalized * bulletSpeed, ForceMode2D.Impulse);
-                    Destroy(bulletmp, 3f);
+                    
                 }
             }
-           
+
+        }
+        else
+        {
+            animator.SetBool("opening", false);
         }
 
         
     }
+
+    
 }

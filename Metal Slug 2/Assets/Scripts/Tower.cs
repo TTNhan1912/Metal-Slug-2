@@ -8,7 +8,7 @@ public class Tower : MonoBehaviour
     public GameObject Left, Right, Middle;
     public float speed, height;
     private Vector2 left, right, middle;
-    public static bool isPlay = false;
+    public static bool isPlaying = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -58,7 +58,7 @@ public class Tower : MonoBehaviour
             if (Middle.transform.position.y > middle.y + height) break;
             yield return null;
         }
-        isPlay = true;
+        isPlaying = true;
 
     }
 
