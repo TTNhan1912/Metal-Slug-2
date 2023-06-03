@@ -93,13 +93,13 @@ public class Linhbo : MonoBehaviour
             
         }
         // trúng đạn
-        //if (collision.gameObject.CompareTag("BulletPistol"))
-        //{
-        //    ani.SetBool("isDie", true);
-        //    ani.Play("linhboDie");
-        //    isDie = true;
+        if (collision.gameObject.CompareTag("BulletPistol"))
+        {
+            ani.SetBool("isDie", true);
+            ani.Play("linhboDie");
+            isDie = true;
 
-        //}
+        }
     }
 
     private void FlipCharacter()

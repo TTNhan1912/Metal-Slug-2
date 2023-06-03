@@ -290,11 +290,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 186242725750448004, guid: 0bb6b0776cd5c244b9e9f4e0634f0769, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 32.73
+      value: 27.54
       objectReference: {fileID: 0}
     - target: {fileID: 186242725750448004, guid: 0bb6b0776cd5c244b9e9f4e0634f0769, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.49
+      value: -3.45
       objectReference: {fileID: 0}
     - target: {fileID: 186242725750448004, guid: 0bb6b0776cd5c244b9e9f4e0634f0769, type: 3}
       propertyPath: m_LocalPosition.z
@@ -334,11 +334,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 186242725750448010, guid: 0bb6b0776cd5c244b9e9f4e0634f0769, type: 3}
       propertyPath: end
-      value: 9
+      value: -13.4
       objectReference: {fileID: 0}
     - target: {fileID: 186242725750448010, guid: 0bb6b0776cd5c244b9e9f4e0634f0769, type: 3}
       propertyPath: start
-      value: 1
+      value: -17
       objectReference: {fileID: 0}
     - target: {fileID: 186242725750448010, guid: 0bb6b0776cd5c244b9e9f4e0634f0769, type: 3}
       propertyPath: Player
@@ -3555,7 +3555,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1531868406}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.95, y: -4.92, z: 0}
+  m_LocalPosition: {x: 29.39, y: -4.37, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3624,11 +3624,16 @@ EdgeCollider2D:
   - {x: -9.703184, y: -1.1542802}
   - {x: -9.091347, y: -1.38435}
   - {x: -7.329337, y: -1.9334278}
-  - {x: -6.4493876, y: -2.3633575}
-  - {x: -3.950941, y: -2.857831}
-  - {x: 14.416702, y: -2.688765}
+  - {x: -5.866439, y: -2.2622395}
+  - {x: -2.393303, y: -2.5626497}
+  - {x: 1.2072468, y: -2.6006598}
+  - {x: 4.487728, y: -2.5368528}
+  - {x: 14.721195, y: -2.5196013}
   - {x: 20.405151, y: -3.142323}
-  - {x: 23.273441, y: -3.5304112}
+  - {x: 23.245224, y: -3.3611202}
+  - {x: 30.990147, y: -3.294423}
+  - {x: 40.582073, y: -3.1651773}
+  - {x: 70.969604, y: -2.995924}
   - {x: 140.83725, y: -2.5142884}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
@@ -4156,11 +4161,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6675184679930650934, guid: 9bf9bb3f9167f2a47927bfeb93b97dbd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 22.73
+      value: 17.94
       objectReference: {fileID: 0}
     - target: {fileID: 6675184679930650934, guid: 9bf9bb3f9167f2a47927bfeb93b97dbd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.023241
+      value: -4.41
       objectReference: {fileID: 0}
     - target: {fileID: 6675184679930650934, guid: 9bf9bb3f9167f2a47927bfeb93b97dbd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4343,15 +4348,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6675184679930650934, guid: 9bf9bb3f9167f2a47927bfeb93b97dbd, type: 3}
       propertyPath: m_LocalScale.x
-      value: 5
+      value: -5.9525003
       objectReference: {fileID: 0}
     - target: {fileID: 6675184679930650934, guid: 9bf9bb3f9167f2a47927bfeb93b97dbd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 30.03
+      value: 33.37
       objectReference: {fileID: 0}
     - target: {fileID: 6675184679930650934, guid: 9bf9bb3f9167f2a47927bfeb93b97dbd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.99
+      value: -4.94
       objectReference: {fileID: 0}
     - target: {fileID: 6675184679930650934, guid: 9bf9bb3f9167f2a47927bfeb93b97dbd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4387,11 +4392,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6675184679930650935, guid: 9bf9bb3f9167f2a47927bfeb93b97dbd, type: 3}
       propertyPath: end
-      value: 31
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 6675184679930650935, guid: 9bf9bb3f9167f2a47927bfeb93b97dbd, type: 3}
       propertyPath: start
-      value: 18
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 6675184679930650935, guid: 9bf9bb3f9167f2a47927bfeb93b97dbd, type: 3}
       propertyPath: Player

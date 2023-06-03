@@ -36,14 +36,14 @@ public class NamNemLD : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         // trúng đạn
-        //if (collision.gameObject.CompareTag("BulletPistol"))
-        //{
-        //    FlipCharacter();
-        //    ani.SetBool("isDie", true);
-        //    ani.Play("linhnamldDie");
-        //    isDie = true;
+        if (collision.gameObject.CompareTag("BulletPistol"))
+        {
+            FlipCharacter();
+            ani.SetBool("isDie", true);
+            ani.Play("linhnamldDie");
+            isDie = true;
 
-        //}
+        }
     }
 
     private void FlipCharacter()
