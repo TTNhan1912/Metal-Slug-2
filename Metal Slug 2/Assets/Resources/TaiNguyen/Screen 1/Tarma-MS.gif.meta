@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 15
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -115,7 +115,406 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Tarma-MS_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1045
+        width: 30
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea9441784574780478fc716965b08946
+      internalID: 1737303727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tarma-MS_1
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 1045
+        width: 33
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cecc7e3c38eaa964fbab01985597ea20
+      internalID: -2078437495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tarma-MS_2
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 1044
+        width: 32
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8776004faa58cb94abdf65fb4d1fc880
+      internalID: -697957340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tarma-MS_3
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 1044
+        width: 33
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4638453c735c3ec438d86899f871e36a
+      internalID: 1816005755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tarma-MS_4
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 1045
+        width: 33
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 927a859446798d94e8b9f0e59998abe3
+      internalID: -1889388146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tarma-MS_5
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 1045
+        width: 33
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24404b68ef780754fa55ada12e6a3fd6
+      internalID: 2003704285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tarma-MS_6
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 1045
+        width: 34
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 610d2879fc30be843b151191c3acac70
+      internalID: 2125043690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tarma-MS_7
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 1045
+        width: 31
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68c3a65e2fb10084d92e84b1e307cd28
+      internalID: 1438720995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tarma-MS_8
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 1045
+        width: 30
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 134f6582e68ca944e9492b8db6e02f43
+      internalID: 726280894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tarma-MS_9
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 1045
+        width: 29
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec9027b8e04d76843ab09ec9cae52882
+      internalID: 1728585811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tarma-MS_10
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 1044
+        width: 27
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b0351bb10863c8409ae6f4822573997
+      internalID: -542698558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tarma-MS_11
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 1045
+        width: 26
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dbc8916804354641a3cd97287791455
+      internalID: 1028849447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tarma-MS_12
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 1045
+        width: 23
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44e1aa6808868fa4d8b62ee55efe4300
+      internalID: 456450224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tarma-MS_13
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 1045
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f157ac44f8e82c24d920cd59df36d57d
+      internalID: 904392384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tarma-MS_14
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 1045
+        width: 25
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d43749ff42859e4459cc5079dee2d6c1
+      internalID: 140125473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tarma-MS_15
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 1045
+        width: 31
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61f38acd6f12931429439a21b2e8c318
+      internalID: 1928949945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tarma-MS_16
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 1045
+        width: 31
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e049970fc7cf6b43a96e4d0ed4a6715
+      internalID: 145835462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tarma-MS_17
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 1044
+        width: 37
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80d5bac803d2d5c488510a3cceff0b03
+      internalID: 511773404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tarma-MS_18
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 1044
+        width: 41
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97db0ac10e8b40241a4fbca03599274a
+      internalID: -1373374861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -126,7 +525,26 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Tarma-MS_11: 1028849447
+      Tarma-MS_3: 1816005755
+      Tarma-MS_9: 1728585811
+      Tarma-MS_12: 456450224
+      Tarma-MS_18: -1373374861
+      Tarma-MS_10: -542698558
+      Tarma-MS_2: -697957340
+      Tarma-MS_15: 1928949945
+      Tarma-MS_4: -1889388146
+      Tarma-MS_1: -2078437495
+      Tarma-MS_14: 140125473
+      Tarma-MS_0: 1737303727
+      Tarma-MS_5: 2003704285
+      Tarma-MS_16: 145835462
+      Tarma-MS_6: 2125043690
+      Tarma-MS_13: 904392384
+      Tarma-MS_8: 726280894
+      Tarma-MS_17: 511773404
+      Tarma-MS_7: 1438720995
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
