@@ -29,7 +29,7 @@ public class Player : MonoBehaviour
     public GameObject Alive3;
     public GameObject Alive5;
     public GameObject Alive2;
-    
+
 
     // Start is called before the first frame update
     void Start()
@@ -44,12 +44,14 @@ public class Player : MonoBehaviour
         life = 5;
 
 
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.D))
         {
             isRight = true;
             if(nen_dat == true)
@@ -70,7 +72,7 @@ public class Player : MonoBehaviour
         {
             ani.SetBool("IsRunning", false);
         }
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.A))
         {
             isRight = false;
 
@@ -90,18 +92,24 @@ public class Player : MonoBehaviour
             transform.localScale = new Vector3(-0.8F, 0.8F, 0.8F);
         }
 
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             if (nen_dat)
             {
                 rigidbody2d.AddForce(new Vector2(0, 420));
                 nen_dat = false;
-                ani.SetBool("IsJump", true);
                 ani.Play("jump");
+                ani.SetBool("IsJump", false);
             }
         }
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            ani.SetBool("IsCanChien", true);
+            ani.Play("canchien");
+            
+        }
 
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.Mouse0))
         {
             if (count == 0)
             {
@@ -109,6 +117,7 @@ public class Player : MonoBehaviour
                 var y = transform.position.y + (isRight ? 0.5f : 0.5f);
                 var z = transform.position.z;
 
+                ani.Play("shoot");
                 // chuyển isright ben bullet qua bên đây
                 GameObject gameObject = (GameObject)Instantiate(Resources.Load("Prefabs/BulletPistol"),
                 new Vector3(x, y, z),
@@ -142,6 +151,8 @@ public class Player : MonoBehaviour
                 Quaternion.identity);
                 gameObject.GetComponent<Boom>().setIsRight(isRight);
 
+                
+
                 ani.SetBool("IsThrowBoom", true);
                 ani.Play("throwBoom");
                 count = 1; 
@@ -173,10 +184,20 @@ public class Player : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("boom"))
+        //if (collision.gameObject.CompareTag("boom"))
+        //{
+        //    boom++;
+        //    textBoom.text = boom + "";
+        //}
+
+        if (collision.gameObject.CompareTag("Ammo"))
         {
-            boom++;
-            textBoom.text = boom + "";
+            Destroy(collision.gameObject);
+        }
+
+        if (collision.gameObject.CompareTag("danBoss"))
+        {
+            lifeCheck();
         }
     }
 

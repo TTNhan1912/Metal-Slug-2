@@ -7,7 +7,7 @@ public class PrisonerScript : MonoBehaviour
 {
     private Animator ani;
     //public Player playerCharacter;
-    private bool isCollideNPC, isRescued;
+    private bool isCollideNPC/*, isRescued*/;
     private Vector2 originalPosition;
     public GameObject ammo, item, item1;
     //private bool reward = false;
@@ -20,7 +20,7 @@ public class PrisonerScript : MonoBehaviour
         //playerCharacter = GetComponent<Player>();
         ani = GetComponent<Animator>();
         originalPosition = transform.position;
-        isRescued = false;
+        //isRescued = false;
         isRight = true;
     }
 
@@ -30,28 +30,29 @@ public class PrisonerScript : MonoBehaviour
         
         if (Input.GetKeyUp(KeyCode.Return))
         {
-            if (isCollideNPC == true && !isRescued)
+            if (isCollideNPC)
             {
                 ani.SetBool("isRescue", true);
                 ani.SetBool("isReward", true);
                 StartCoroutine(DropItem());  
-                isRescued =true;
+                //isRescued =true;
             }
+
         }
 
-        if (isRescued)
-        {
-            Vector3 vector3;
-            if (isRight)
-            {
-                StartCoroutine(WaitForEscape());
-                
-                Vector2 scale = transform.localScale;
-                scale.x *= scale.x > 0 ? -1 : 1;
-                transform.localScale = scale;
-                vector3 = new Vector3(1, 0, 0);
-            }
-        }
+        //if(isRescued)
+        //{
+        //    Vector3 vector3;
+        //    if (isRight)
+        //    {
+        //        StartCoroutine(WaitForEscape());
+        //        ani.SetBool("isRunAway", true);
+        //        Vector2 scale = transform.localScale;
+        //        scale.x *= scale.x > 0 ? -1 : 1;
+        //        transform.localScale = scale;
+        //        vector3 = new Vector3(1, 0, 0);
+        //    }
+        //}
 
     }
 
@@ -83,10 +84,9 @@ public class PrisonerScript : MonoBehaviour
     }
 
 
-    IEnumerator WaitForEscape()
-    {
-        yield return new WaitForSeconds(5);
-        ani.SetBool("isRunAway", true);
-        yield return null;
-    }
+    //IEnumerator WaitForEscape()
+    //{
+    //    yield return new WaitForSeconds(5);
+    //    yield return null;
+    //}
 }
