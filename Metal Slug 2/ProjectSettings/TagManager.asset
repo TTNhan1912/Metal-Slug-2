@@ -12,6 +12,18 @@ TagManager:
   - 3
   - 4
   - 5
+  - danBoss
+  - Ammo
+  - thanh
+  - Prisoner
+  - linhbo
+  - BulletPistol
+  - item_sting
+  - item_traicay
+  - item_gas
+  - item_hp
+  - item_boom
+  - item_vang
   layers:
   - Default
   - TransparentFX
