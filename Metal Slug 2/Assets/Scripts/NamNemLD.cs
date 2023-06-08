@@ -61,7 +61,7 @@ public class NamNemLD : MonoBehaviour
         while (true)
         {
             // Chờ một khoảng thời gian
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(5f);
 
             // Tạo lựu đạn tại vị trí của nhân vật
             Instantiate(luudan, transform.position, Quaternion.identity);

@@ -57,6 +57,26 @@ public class LuuDan : MonoBehaviour
 
             // mất hình
             Destroy(gameObject,0.25f);
+        }
+        // lựu đạn chạm player
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            // animation nổ
+            anim.SetBool("isNo", true);
+            anim.Play("luudanNo");
+            //dừng di chuyển
+            Vector2 force = new Vector2(0, 0);
+            rb.AddForce(force, ForceMode2D.Impulse);
+
+            //thu nhỏ do hình nổ bự hơn lựu đạn
+            Vector2 scale = transform.localScale;
+            scale.x = 0.5f;
+            scale.y = 0.5f;
+            // up lại scale
+            transform.localScale = scale;
+
+            // mất hình
+            Destroy(gameObject, 0.25f);
 
         }
     }

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -23,7 +24,7 @@ public class Player : MonoBehaviour
 
     // mạng
     private int life;
-    public bool isAlive;
+    private bool isAlive;
     public GameObject Alive1;
     public GameObject Alive4;
     public GameObject Alive3;
@@ -40,131 +41,132 @@ public class Player : MonoBehaviour
         Run = 0;
         nen_dat = true;
 
-        isAlive = false;
+        isAlive = true;
         life = 5;
-
-
-
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.D))
+        if (!isAlive) return;
+        if (isAlive)
         {
-            isRight = true;
-            if(nen_dat == true)
+            if (Input.GetKey(KeyCode.D))
             {
-                ani.SetBool("IsRunning", true);
-                ani.Play("running");
-            }
-            else
-            {
-                ani.SetBool("IsJump", true);
-                ani.Play("jump");
-            }
-
-            transform.Translate(Time.deltaTime * 5, 0, 0);
-            transform.localScale = new Vector3(0.8F, 0.8F, 0.8F);
-        }
-        else
-        {
-            ani.SetBool("IsRunning", false);
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            isRight = false;
-
-            if (nen_dat == true)
-            {
-                ani.SetBool("IsRunning", true);
-                ani.Play("running");
-            }
-            else
-            {
-                ani.SetBool("IsJump", true);
-                ani.Play("jump");
-            }
-
-
-            transform.Translate(-Time.deltaTime * 5, 0, 0);
-            transform.localScale = new Vector3(-0.8F, 0.8F, 0.8F);
-        }
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            if (nen_dat)
-            {
-                rigidbody2d.AddForce(new Vector2(0, 420));
-                nen_dat = false;
-                ani.Play("jump");
-                ani.SetBool("IsJump", false);
-            }
-        }
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            ani.SetBool("IsCanChien", true);
-            ani.Play("canchien");
-            
-        }
-
-        if(Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            if (count == 0)
-            {
-                var x = transform.position.x + (isRight ? 1.5f : -1.5f);
-                var y = transform.position.y + (isRight ? 0.5f : 0.5f);
-                var z = transform.position.z;
-
-                ani.Play("shoot");
-                // chuyển isright ben bullet qua bên đây
-                GameObject gameObject = (GameObject)Instantiate(Resources.Load("Prefabs/BulletPistol"),
-                new Vector3(x, y, z),
-                Quaternion.identity);
-                gameObject.GetComponent<BulletPisTol>().setIsRight(isRight);
-
-                ani.SetTrigger("nutban");
-                
-                count = 1; 
-            }
-                if(count == 1)
+                isRight = true;
+                if (nen_dat == true)
                 {
-                    
+                    ani.SetBool("IsRunning", true);
+                    ani.Play("running");
+                }
+                else
+                {
+                    ani.SetBool("IsJump", true);
+                    ani.Play("jump");
+                }
+
+                transform.Translate(Time.deltaTime * 5, 0, 0);
+                transform.localScale = new Vector3(0.8F, 0.8F, 0.8F);
+            }
+            else
+            {
+                ani.SetBool("IsRunning", false);
+            }
+            if (Input.GetKey(KeyCode.A))
+            {
+                isRight = false;
+
+                if (nen_dat == true)
+                {
+                    ani.SetBool("IsRunning", true);
+                    ani.Play("running");
+                }
+                else
+                {
+                    ani.SetBool("IsJump", true);
+                    ani.Play("jump");
+                }
+
+
+                transform.Translate(-Time.deltaTime * 5, 0, 0);
+                transform.localScale = new Vector3(-0.8F, 0.8F, 0.8F);
+            }
+
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                if (nen_dat)
+                {
+                    rigidbody2d.AddForce(new Vector2(0, 420));
+                    nen_dat = false;
+                    ani.Play("jump");
+                    ani.SetBool("IsJump", false);
+                }
+            }
+            if (Input.GetKeyDown(KeyCode.C))
+            {
+                ani.SetBool("IsCanChien", true);
+                ani.Play("canchien");
+
+            }
+
+            if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                if (count == 0)
+                {
+                    var x = transform.position.x + (isRight ? 1.5f : -1.5f);
+                    var y = transform.position.y + (isRight ? 0.5f : 0.5f);
+                    var z = transform.position.z;
+
+                    ani.Play("shoot");
+                    // chuyển isright ben bullet qua bên đây
+                    GameObject gameObject = (GameObject)Instantiate(Resources.Load("Prefabs/BulletPistol"),
+                    new Vector3(x, y, z),
+                    Quaternion.identity);
+                    gameObject.GetComponent<BulletPisTol>().setIsRight(isRight);
+
+                    ani.SetTrigger("nutban");
+
+                    count = 1;
+                }
+                if (count == 1)
+                {
+
                     count = 0;
                 }
-        }
-
-        if(Input.GetKeyDown(KeyCode.LeftShift) && boom > 0)
-        {
-            if (count == 0)
-            {
-                boom--;
-                textBoom.text = boom + "";
-                var x = transform.position.x + (isRight ? 1.5f : -1.5f);
-                var y = transform.position.y + (isRight ? 1f : 1f);
-                var z = transform.position.z;
-
-                // chuyển isright ben bullet qua bên đây
-                GameObject gameObject = (GameObject)Instantiate(Resources.Load("Prefabs/Boom"),
-                new Vector3(x, y, z),
-                Quaternion.identity);
-                gameObject.GetComponent<Boom>().setIsRight(isRight);
-
-                
-
-                ani.SetBool("IsThrowBoom", true);
-                ani.Play("throwBoom");
-                count = 1; 
             }
-            if(count == 1)
-            {
-                ani.SetBool("IsThrowBoom", false);
-                ani.Play("throwBoom");
-                count = 0;
-            }
-        }
 
+            if (Input.GetKeyDown(KeyCode.LeftShift) && boom > 0)
+            {
+                if (count == 0)
+                {
+                    boom--;
+                    textBoom.text = boom + "";
+                    var x = transform.position.x + (isRight ? 1.5f : -1.5f);
+                    var y = transform.position.y + (isRight ? 1f : 1f);
+                    var z = transform.position.z;
+
+                    // chuyển isright ben bullet qua bên đây
+                    GameObject gameObject = (GameObject)Instantiate(Resources.Load("Prefabs/Boom"),
+                    new Vector3(x, y, z),
+                    Quaternion.identity);
+                    gameObject.GetComponent<Boom>().setIsRight(isRight);
+
+
+
+                    ani.SetBool("IsThrowBoom", true);
+                    ani.Play("throwBoom");
+                    count = 1;
+                }
+                if (count == 1)
+                {
+                    ani.SetBool("IsThrowBoom", false);
+                    ani.Play("throwBoom");
+                    count = 0;
+                }
+            }
+
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -174,11 +176,21 @@ public class Player : MonoBehaviour
             nen_dat = true;
             ani.SetBool("IsJump", false);
         }
-        else if (collision.gameObject.CompareTag("Arabian"))
+        /*else if (collision.gameObject.CompareTag("Arabian"))
         {
             ani.SetBool("IsDeadByDao", true);
             ani.Play("DeadByDao");
             lifeCheck();
+        }*/
+        if (collision.gameObject.CompareTag("luudan"))
+        {
+            life--;
+            isAlive = false;
+            if (!isAlive)
+            {
+                StartCoroutine(DeadBoom());
+                lifeCheck();
+            }
         }
 
     }
@@ -197,55 +209,52 @@ public class Player : MonoBehaviour
 
         if (collision.gameObject.CompareTag("danBoss"))
         {
-            lifeCheck();
+            life--;
+            isAlive = false;
+            if (!isAlive)
+            {
+                StartCoroutine(DeadBoom());
+                lifeCheck();
+            }
         }
+
     }
 
     private void lifeCheck()
     {
-        if(life == 5)
+        if (life == 4)
         {
-            life--;
-            var x = transform.position.x;
-            var y = transform.position.y + 5f;
-            transform.localPosition = new Vector2(x, y);
             Alive5.SetActive(false);
-        }
-        else if (life == 4)
-        {
-            life--;
-            var x = transform.position.x;
-            var y = transform.position.y + 5f;
-            transform.localPosition = new Vector2(x, y);
-            Alive4.SetActive(false);
+             
         }
         else if (life == 3)
         {
-            life--;
-            var x = transform.position.x;
-            var y = transform.position.y + 5f;
-            transform.localPosition = new Vector2(x, y);
-            Alive3.SetActive(false);
+            Alive4.SetActive(false);
         }
         else if (life == 2)
         {
-            life--;
-            var x = transform.position.x;
-            var y = transform.position.y + 5f;
-            transform.localPosition = new Vector2(x, y);
-            Alive2.SetActive(false);
+            Alive3.SetActive(false);
         }
         else if (life == 1)
         {
-            life--;
-            var x = transform.position.x;
-            var y = transform.position.y + 5f;
-            transform.localPosition = new Vector2(x, y);
-            Alive1.SetActive(false);
+            Alive2.SetActive(false);
         }
-        else
+        else if (life == 0)
         {
             SceneManager.LoadScene("Man_1");
         }
+           
+    }
+
+    private IEnumerator DeadBoom()
+    {
+        ani.SetBool("isDeadBoom", true);
+        ani.Play("DeadByBoom");
+        yield return new WaitForSeconds(2.1f);
+        ani.SetBool("isDeadBoom", false);
+        var x = transform.position.x;
+        var y = transform.position.y + 5f;
+        transform.localPosition = new Vector2(x, y);
+        isAlive = true;
     }
 }

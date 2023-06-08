@@ -24,6 +24,7 @@ TagManager:
   - item_hp
   - item_boom
   - item_vang
+  - luudan
   layers:
   - Default
   - TransparentFX
