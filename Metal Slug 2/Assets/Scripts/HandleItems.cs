@@ -7,6 +7,7 @@ public class HandleItems : MonoBehaviour
 {
 
     private Collider2D collider;
+    public static int isCoin;
     private void Start()
     {
         collider = GetComponent<Collider2D>();
@@ -58,12 +59,14 @@ public class HandleItems : MonoBehaviour
             else if (tag == "item_vang")
             {
                 // Xử lý logic cho đối tượng có tag "item_vang"
+                isCoin = 1;
                 //mất item
                 Destroy(gameObject);
                 Debug.Log("vang");
             }
             else
             {
+                isCoin = 0;
                 // Xử lý logic mặc định cho các đối tượng khác
                 Debug.Log("Default logic");
             }

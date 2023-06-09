@@ -40,7 +40,7 @@ public class NamNemLD : MonoBehaviour
         {
             FlipCharacter();
             ani.SetBool("isDie", true);
-            ani.Play("linhnamldDie");
+           // ani.Play("linhnamldDie");
             isDie = true;
 
         }
