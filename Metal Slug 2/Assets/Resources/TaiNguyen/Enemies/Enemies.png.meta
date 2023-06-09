@@ -1125,34 +1125,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_48
-      rect:
-        serializedVersion: 2
-        x: 647
-        y: 1782
-        width: 42
-        height: 20
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b694f1b738313574dafe5aeddcc90cc0
-      internalID: 2124695504
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Enemies_49
       rect:
         serializedVersion: 2
         x: 646
         y: 1805
         width: 39
-        height: 32
+        height: 38
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
