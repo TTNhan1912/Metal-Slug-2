@@ -125,8 +125,6 @@ public class Player : MonoBehaviour
                     Quaternion.identity);
                     gameObject.GetComponent<BulletPisTol>().setIsRight(isRight);
 
-                    ani.SetTrigger("nutban");
-
                     count = 1;
                 }
                 if (count == 1)

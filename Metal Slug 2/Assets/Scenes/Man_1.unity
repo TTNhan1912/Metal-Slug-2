@@ -872,6 +872,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Char
       objectReference: {fileID: 0}
+    - target: {fileID: 1631043720225639243, guid: 78d28d66ca3bcc044a947290a283eb37, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1631043720225639245, guid: 78d28d66ca3bcc044a947290a283eb37, type: 3}
       propertyPath: m_Size.x
       value: 2.1271896
@@ -920,6 +924,10 @@ PrefabInstance:
       propertyPath: textBoom
       value: 
       objectReference: {fileID: 1775090010}
+    - target: {fileID: 1631043720225639247, guid: 78d28d66ca3bcc044a947290a283eb37, type: 3}
+      propertyPath: m_UpdateMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1631043720225639280, guid: 78d28d66ca3bcc044a947290a283eb37, type: 3}
       propertyPath: m_SortingOrder
       value: 10
@@ -938,11 +946,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1631043720225639281, guid: 78d28d66ca3bcc044a947290a283eb37, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.43
+      value: -3.11
       objectReference: {fileID: 0}
     - target: {fileID: 1631043720225639281, guid: 78d28d66ca3bcc044a947290a283eb37, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.95
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 1631043720225639281, guid: 78d28d66ca3bcc044a947290a283eb37, type: 3}
       propertyPath: m_LocalPosition.z
@@ -974,6 +982,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1631043720225639281, guid: 78d28d66ca3bcc044a947290a283eb37, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1631043720225639281, guid: 78d28d66ca3bcc044a947290a283eb37, type: 3}
+      propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2084,6 +2096,27 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1631043720225639243, guid: 78d28d66ca3bcc044a947290a283eb37, type: 3}
   m_PrefabInstance: {fileID: 590456325}
   m_PrefabAsset: {fileID: 0}
+--- !u!50 &1127051318
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1127051311}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &1150855632
 GameObject:
   m_ObjectHideFlags: 0
