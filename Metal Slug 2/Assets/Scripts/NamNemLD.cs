@@ -40,7 +40,7 @@ public class NamNemLD : MonoBehaviour
         {
             FlipCharacter();
             ani.SetBool("isDie", true);
-            ani.Play("linhnamldDie");
+            ani.Play("linhchoildDie");
             isDie = true;
 
         }
@@ -61,7 +61,7 @@ public class NamNemLD : MonoBehaviour
         while (true)
         {
             // Chờ một khoảng thời gian
-            yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(2.4f);
 
             // Tạo lựu đạn tại vị trí của nhân vật
             Instantiate(luudan, transform.position, Quaternion.identity);

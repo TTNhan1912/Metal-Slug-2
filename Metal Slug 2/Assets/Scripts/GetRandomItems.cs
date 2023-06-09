@@ -6,11 +6,19 @@ public class GetRandomItems : MonoBehaviour
 {
     public List<GameObject> items;
     private Vector2 shutdownPosition;
+    private bool isDie;
+
+    private void Start()
+    {
+        isDie = false;
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         // trúng đạn
-        if (collision.gameObject.CompareTag("BulletPistol"))
+        if (collision.gameObject.CompareTag("BulletPistol")&&!isDie)
         {
+            //chết
+            isDie = true;
             // Lưu vị trí của quái vật trước khi bị hủy
             shutdownPosition = transform.position;
 
