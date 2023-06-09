@@ -44,7 +44,6 @@ public class PrisonerScript : MonoBehaviour
 
         if (isRescued)
         {
-            Vector3 vector3;
             if (isRight)
             {
                 StartCoroutine(WaitForEscape());
