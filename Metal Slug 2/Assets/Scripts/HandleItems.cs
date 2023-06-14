@@ -47,7 +47,7 @@ public class HandleItems : MonoBehaviour
                 // Xử lý logic cho đối tượng có tag "item_hp"
                 //mất item
                 Destroy(gameObject);
-                Debug.Log("hp");
+                //Debug.Log("hp");
             }
             else if (tag == "item_sting")
             {

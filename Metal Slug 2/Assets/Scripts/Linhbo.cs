@@ -17,12 +17,19 @@ public class Linhbo : MonoBehaviour
 
     public GameObject Player;
     public float speed;
+
+    //audio
+    public AudioSource getShot;
+
     // Start is called before the first frame update
     void Start()
     {
         ani = GetComponent<Animator>();
         isChem = false;
         isDie = false;
+
+        //audio
+        getShot = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -95,6 +102,9 @@ public class Linhbo : MonoBehaviour
         // trúng đạn
         if (collision.gameObject.CompareTag("BulletPistol"))
         {
+            //audio
+            getShot.Play();
+
             ani.SetBool("isDie", true);
             ani.Play("linhboDie");
             isDie = true;

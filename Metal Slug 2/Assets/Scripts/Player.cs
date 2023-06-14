@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Mono.Cecil;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -31,6 +32,9 @@ public class Player : MonoBehaviour
     public GameObject Alive5;
     public GameObject Alive2;
 
+    //audio
+    public AudioSource firingSound;
+
 
     // Start is called before the first frame update
     void Start()
@@ -43,7 +47,7 @@ public class Player : MonoBehaviour
 
         isAlive = true;
         life = 5;
-
+        firingSound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -112,6 +116,7 @@ public class Player : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
+                
                 if (count == 0)
                 {
                     var x = transform.position.x + (isRight ? 1.5f : -1.5f);
@@ -119,6 +124,8 @@ public class Player : MonoBehaviour
                     var z = transform.position.z;
 
                     ani.Play("shoot");
+                    //sound
+                    firingSound.Play();
                     // chuyển isright ben bullet qua bên đây
                     GameObject gameObject = (GameObject)Instantiate(Resources.Load("Prefabs/BulletPistol"),
                     new Vector3(x, y, z),

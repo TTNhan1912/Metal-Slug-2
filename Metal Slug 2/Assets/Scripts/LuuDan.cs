@@ -10,10 +10,18 @@ public class LuuDan : MonoBehaviour
     private Rigidbody2D rb;
     private Animator anim;
 
+
+    //audio
+    private AudioSource grenadeSound;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+
+        //audio
+        grenadeSound = GetComponent<AudioSource>();
+
 
         ThrowGrenade();
     }
@@ -41,6 +49,9 @@ public class LuuDan : MonoBehaviour
         // lựu đạn chạm đất
         if (collision.gameObject.CompareTag("nen_dat"))
         {
+            //audio
+            grenadeSound.Play();
+
             // animation nổ
             anim.SetBool("isNo", true);
             anim.Play("luudanNo");
@@ -61,6 +72,9 @@ public class LuuDan : MonoBehaviour
         // lựu đạn chạm player
         if (collision.gameObject.CompareTag("Player"))
         {
+            //audio
+            grenadeSound.Play();
+
             // animation nổ
             anim.SetBool("isNo", true);
             anim.Play("luudanNo");

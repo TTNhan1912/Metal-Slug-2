@@ -14,6 +14,10 @@ public class NamNemLD : MonoBehaviour
 
     public GameObject luudan;
     //public float speed;
+
+    //audio
+    public AudioSource getShot;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +25,9 @@ public class NamNemLD : MonoBehaviour
         //isChem = false;
         isDie = false;
         StartCoroutine(ThrowGrenadeRoutine());
+
+        //audio
+        getShot = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -40,6 +47,9 @@ public class NamNemLD : MonoBehaviour
         {
             FlipCharacter();
             ani.SetBool("isDie", true);
+
+            //audio
+            getShot.Play();
 
             ani.Play("linhchoildDie");
 
