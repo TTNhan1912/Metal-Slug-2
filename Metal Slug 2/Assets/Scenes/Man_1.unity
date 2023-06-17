@@ -4123,9 +4123,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a30ed0186f12984ca7d7aaadcf5ab84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ammo: {fileID: 757256741846087154, guid: 0c4b2f264760d9e4f8ff47c21f007820, type: 3}
-  item: {fileID: 757256741846087154, guid: 0c4b2f264760d9e4f8ff47c21f007820, type: 3}
-  item1: {fileID: 757256741846087154, guid: 0c4b2f264760d9e4f8ff47c21f007820, type: 3}
+  ammo: {fileID: 4026417295638330513, guid: af74de8d170b208469c238bc69a4aca2, type: 3}
+  item: {fileID: 4026417295638330513, guid: af74de8d170b208469c238bc69a4aca2, type: 3}
+  item1: {fileID: 4026417295638330513, guid: af74de8d170b208469c238bc69a4aca2, type: 3}
   isRight: 0
 --- !u!1 &1539245126
 GameObject:
