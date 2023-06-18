@@ -39,7 +39,7 @@ public class Golem : MonoBehaviour
         animator = GetComponent<Animator>();
         isLife = true;
         
-        time = 155;
+        time = 10;
     }
 
     private void Update()
