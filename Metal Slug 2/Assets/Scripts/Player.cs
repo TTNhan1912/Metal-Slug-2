@@ -24,7 +24,7 @@ public class Player : MonoBehaviour
     public Text textBoom;
 
     // mạng
-    private int life;
+    public int life;
     private bool isAlive;
     public GameObject Alive1;
     public GameObject Alive4;
@@ -123,7 +123,7 @@ public class Player : MonoBehaviour
                     var y = transform.position.y + (isRight ? 0.5f : 0.5f);
                     var z = transform.position.z;
 
-                    ani.Play("shoot");
+                    ani.SetTrigger("shoot");
                     //sound
                     firingSound.Play();
                     // chuyển isright ben bullet qua bên đây
@@ -170,6 +170,10 @@ public class Player : MonoBehaviour
                     count = 0;
                 }
             }
+
+            life -= GolemAttack.live;
+            GolemAttack.live = 0;
+            lifeCheck();
 
         }
     }
@@ -223,10 +227,16 @@ public class Player : MonoBehaviour
             }
         }
 
+        if (collision.gameObject.CompareTag("Arabian"))
+        {
+            life--;
+            lifeCheck();
+        }
+
 
     }
 
-    private void lifeCheck()
+    public void lifeCheck()
     {
         if (life == 4)
         {
@@ -255,7 +265,6 @@ public class Player : MonoBehaviour
     private IEnumerator DeadBoom()
     {
         ani.SetBool("isDeadBoom", true);
-        ani.Play("DeadByBoom");
         yield return new WaitForSeconds(2.1f);
         ani.SetBool("isDeadBoom", false);
         var x = transform.position.x;

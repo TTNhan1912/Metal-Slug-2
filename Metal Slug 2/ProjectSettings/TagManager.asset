@@ -25,6 +25,7 @@ TagManager:
   - item_boom
   - item_vang
   - luudan
+  - firebullet
   layers:
   - Default
   - TransparentFX
@@ -32,7 +33,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - vatcan
   - 
   - 
   - 

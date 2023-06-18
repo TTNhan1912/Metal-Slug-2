@@ -18,6 +18,7 @@ public class BulletPisTol : MonoBehaviour
     {
         // di chuyển đạn
         transform.Translate((isRight ? Vector3.right : Vector3.left) * Time.deltaTime * 20f);
+        Destroy(gameObject,3);
     }
 
     public void setIsRight(bool isRight)

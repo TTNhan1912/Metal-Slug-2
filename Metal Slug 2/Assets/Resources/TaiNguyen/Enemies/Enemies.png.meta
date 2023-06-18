@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -1566,10 +1566,10 @@ TextureImporter:
       Enemies_26: -23771036
       Enemies_31: 1477601347
       Enemies_8: 2103015306
-      Enemies_37: 83664708
-      Enemies_13: 964732185
-      Enemies_34: -1810753890
       Enemies_56: 1571277183
+      Enemies_34: -1810753890
+      Enemies_13: 964732185
+      Enemies_37: 83664708
       Enemies_67: -1779931706
       Enemies_39: -298406297
       Enemies_16: -403368214
