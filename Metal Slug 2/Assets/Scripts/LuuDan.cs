@@ -44,7 +44,7 @@ public class LuuDan : MonoBehaviour
         //isThrown = true;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+       private void OnCollisionEnter2D(Collision2D collision)
     {
         // lựu đạn chạm đất
         if (collision.gameObject.CompareTag("nen_dat"))
@@ -67,7 +67,7 @@ public class LuuDan : MonoBehaviour
             transform.localScale = scale;
 
             // mất hình
-            Destroy(gameObject,0.25f);
+            Destroy(gameObject, 0.25f);
         }
         // lựu đạn chạm player
         if (collision.gameObject.CompareTag("Player"))

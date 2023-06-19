@@ -26,6 +26,14 @@ public class LinhBoss : MonoBehaviour
         reachDestination = true;
         animator = GetComponent<Animator>();
     }
+
+    private void Update()
+    {
+        if (Golem.isLife == false)
+        {
+            Destroy(gameObject);
+        }
+    }
     void CalculatePath()
     {
         Vector2 target = FindTarget();
@@ -55,7 +63,7 @@ public class LinhBoss : MonoBehaviour
             Vector2 direction = ((Vector2)path.vectorPath[currentWP] - (Vector2)transform.position).normalized;
             Vector2 force = direction * moveSpeed * Time.deltaTime;
             transform.position += (Vector3)force;
-            animator.SetFloat("run", direction.sqrMagnitude);
+            
 
             float distance = Vector2.Distance(transform.position, path.vectorPath[currentWP]);
             if (distance < nextWPDistance)

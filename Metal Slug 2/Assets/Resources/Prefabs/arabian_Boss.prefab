@@ -185,7 +185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a19d1b3fa0ceca4a932dd0fad11009f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
+  moveSpeed: 5
   nextWPDistance: 0.3
   characterSR: {fileID: 186242725750448005}
   seeker: {fileID: 6740697674616491449}

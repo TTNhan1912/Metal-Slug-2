@@ -29,7 +29,7 @@ public class Golem : MonoBehaviour
     private float time;
 
     public float Life;
-    public bool isLife;
+    public static bool isLife;
 
 
     private void Start()

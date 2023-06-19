@@ -30,7 +30,7 @@ public class PrisonerScript : MonoBehaviour
     void Update()
     {
         
-        if (Input.GetKeyUp(KeyCode.Return) && !isRescued)
+        if ( !isRescued)
         {
             if (isCollideNPC)
             {

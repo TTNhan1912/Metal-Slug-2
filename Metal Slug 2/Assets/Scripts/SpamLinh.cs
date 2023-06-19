@@ -22,7 +22,7 @@ public class SpamLinh : MonoBehaviour
     void Start()
     {
         viTriBan = vitriban.transform.position;
-        istime = 8;
+        istime = 5;
         
 
         timeSpawn = 2;
@@ -34,8 +34,14 @@ public class SpamLinh : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Golem.isLife == false)
+        {
+            Destroy(gameObject);
+           
+        } 
         if (IsBoss.isBoss)
         {
+
             isSpawm -= LinhBoss.linhDie;
             LinhBoss.linhDie = 0;
             if (isSpawm < 10 )
