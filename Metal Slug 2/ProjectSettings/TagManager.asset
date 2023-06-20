@@ -26,6 +26,7 @@ TagManager:
   - item_vang
   - luudan
   - firebullet
+  - boss
   layers:
   - Default
   - TransparentFX
