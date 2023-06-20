@@ -20,4 +20,26 @@ public class Boom : MonoBehaviour
     {
         this.isRight = isRight;
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("luudan"))
+        {
+            Destroy(gameObject);
+        }
+        if (collision.gameObject.CompareTag("nen_dat"))
+        {
+            Destroy(gameObject);
+        }
+        if (collision.gameObject.CompareTag("linhbo"))
+        {
+            Destroy(gameObject);
+        }
+        if (collision.gameObject.CompareTag("boss"))
+        {
+            Destroy(gameObject);
+        }
+
+    }
+
 }

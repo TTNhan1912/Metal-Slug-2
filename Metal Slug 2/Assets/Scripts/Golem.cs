@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
+using Unity.VisualScripting;
 
 public class Golem : MonoBehaviour
 {
@@ -31,6 +32,7 @@ public class Golem : MonoBehaviour
     public float Life;
     public static bool isLife;
 
+    public GameObject win;
 
     private void Start()
     {
@@ -117,6 +119,7 @@ public class Golem : MonoBehaviour
                 isLife = false;
                 moveSpeed = 0;
                 animator.SetBool("death", true);
+                StartCoroutine(Win());
             }
         }
 
@@ -182,6 +185,13 @@ public class Golem : MonoBehaviour
        
         return playerPos;
        
+    }
+
+    private IEnumerator Win()
+    {
+        yield return new WaitForSeconds(2.5f);
+        win.SetActive(true);
+        Time.timeScale = 0;
     }
 
 }
